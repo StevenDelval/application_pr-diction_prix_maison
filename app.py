@@ -60,7 +60,7 @@ nb_floor = st.number_input(label="Nombre d'etage :",min_value=0.,step=1.,format=
 caracteristique_maison[5] = nb_floor
 
 waterfront = st.radio(
-     "A t-elle vue sur la mer ",
+     "A t-elle vue sur la mer ?",
      ('Oui', 'Non'))
 if waterfront == 'Oui':
   caracteristique_maison[6] = 1
