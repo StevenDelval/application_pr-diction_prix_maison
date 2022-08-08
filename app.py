@@ -30,7 +30,7 @@ my_col_trans = ColumnTransformer([
 ])
 
 
-modelRid= make_pipeline(my_col_trans, Ridge(alpha=10))
+modelRid= make_pipeline(my_col_trans, Ridge(alpha=10,random_state=0))
 modelRid.fit(X_train,y_train)
 st.write(modelRid.score(X_test,y_test))
 
