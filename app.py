@@ -15,6 +15,7 @@ y_train = pd.read_csv('csv/y_train.csv')
 y_test = pd.read_csv('csv/y_test.csv') 
 
 numerical_features = [
+       'bedrooms', 'bathrooms',
        'sqft_living', 'sqft_living_carre', 'sqft_lot','sqft_above',
        'sqft_basement','sqft_living15', 'sqft_lot15'
        ]
@@ -31,14 +32,14 @@ my_col_trans = ColumnTransformer([
 
 modelRid= make_pipeline(my_col_trans, Ridge(alpha=10))
 modelRid.fit(X_train,y_train)
-
+st.write(modelRid.score(X_test,y_test))
 
 
 titre = "Prédiction prix d'une maison"
 original_title = '<p style="font-family:Courier; color:Blue; font-size: 42px;">{} </p>'.format(titre)
 st.markdown(original_title, unsafe_allow_html=True)
 
-st.write(modelRid.score(X_test,y_test))
+
 
 caracteristique_maison = [0 for _ in range(17)]
 
