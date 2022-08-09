@@ -59,7 +59,7 @@ caracteristique_maison[5] = nb_floor
 
 waterfront = st.radio(
      "A t-elle vue sur la mer ?",
-     ('Oui', 'Non'))
+     ('Non','Oui' ))
 if waterfront == 'Oui':
   caracteristique_maison[6] = 1
 else:
@@ -111,5 +111,5 @@ if(st.button("Valider")):
     
     predic = int(modelRid.predict(pd.DataFrame(np.array(caracteristique_maison).reshape(1, -1),columns=X_train.columns)))
     
-    new_title = '<p style="font-family:sans-serif; color:Green;width:100%;text-align:center; font-size: 36px;">{}</p>'.format(predic)
+    new_title = '<p style="font-family:sans-serif; color:Green;width:100%;text-align:center; font-size: 36px;">{} $</p>'.format(predic)
     st.markdown(new_title, unsafe_allow_html=True)
