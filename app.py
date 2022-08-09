@@ -1,13 +1,11 @@
 import streamlit as st
 import pandas as pd
-from datetime import datetime
 import numpy as np
-from sklearn.compose import make_column_selector, ColumnTransformer
+from sklearn.compose import  ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder,StandardScaler,PolynomialFeatures
 from sklearn.linear_model import Ridge
 from sklearn.pipeline import make_pipeline
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import GridSearchCV,learning_curve
+
 
 X_train = pd.read_csv('csv/X_train.csv')
 X_test = pd.read_csv('csv/X_test.csv')
