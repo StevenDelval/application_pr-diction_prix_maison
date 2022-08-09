@@ -32,8 +32,6 @@ my_col_trans = ColumnTransformer([
 
 modelRid= make_pipeline(my_col_trans, Ridge(alpha=7.5,random_state=0))
 modelRid.fit(X_train,y_train)
-st.write(modelRid.score(X_test,y_test))
-
 
 titre = "Prédiction prix d'une maison"
 original_title = '<p style="font-family:Courier; color:Blue; font-size: 42px;">{} </p>'.format(titre)
