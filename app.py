@@ -85,7 +85,18 @@ sqft_basement = st.number_input(label="Espace interieur (en sqft) en dessous du 
 caracteristique_maison[12] = sqft_basement
 caracteristique_maison[13] = sqft_basement**2
 
-zip_code = st.number_input(label="zip code :",min_value=98000,max_value=99000, key="zip code :")
+liste_zip_code= [98001, 98002, 98003, 98004, 98005, 98006, 98007, 98008, 98010,
+       98011, 98014, 98019, 98022, 98023, 98024, 98027, 98028, 98029,
+       98030, 98031, 98032, 98033, 98034, 98038, 98039, 98040, 98042,
+       98045, 98052, 98053, 98055, 98056, 98058, 98059, 98065, 98070,
+       98072, 98074, 98075, 98077, 98092, 98102, 98103, 98105, 98106,
+       98107, 98108, 98109, 98112, 98115, 98116, 98117, 98118, 98119,
+       98122, 98125, 98126, 98133, 98136, 98144, 98146, 98148, 98155,
+       98166, 98168, 98177, 98178, 98188, 98198, 98199]
+
+zip_code = st.selectbox("Zip Code: ", 
+                     liste_zip_code)
+
 caracteristique_maison[14] = zip_code
 
 sqft_living15 = st.number_input(label="Espace interieur (en sqft) des 15 voisins :",min_value=0, key="sqft_living15 :")
