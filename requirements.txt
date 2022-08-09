@@ -123,7 +123,6 @@ seaborn
 semver 
 Send2Trash==1.8.0
 Shapely==1.8.2
-sip==4.19.13
 six==1.16.0
 smmap 
 sniffio==1.2.0
